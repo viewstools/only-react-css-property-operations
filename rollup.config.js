@@ -1,3 +1,4 @@
+import buble from 'rollup-plugin-buble'
 import cleanup from 'rollup-plugin-cleanup'
 import replace from 'rollup-plugin-replace'
 
@@ -15,6 +16,7 @@ export default {
   entry: './CSSPropertyOperations.js',
   format: 'cjs',
   plugins: [
+    buble(),
     replace({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
